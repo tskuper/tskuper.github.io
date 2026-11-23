@@ -1,0 +1,169 @@
+/* Styling for reservation page */
+
+/* Sets up styling for login field in reservation page */
+
+fieldset {
+   height: auto;
+   border-radius: 20px;
+   background: linear-gradient(145deg, #736666, #493b3b);
+   color: #ffffff;
+   box-shadow: 0 5px 15px #000000;
+}
+
+/* Sets styling for column title boxes */
+
+legend {
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-size: 1.3em;
+   font-weight: bold;
+   color: #ffcccc;
+   padding: 8px 15px;
+   background-color: #4b0000;
+   border: 1px solid #990000;
+   border-radius: 8px;
+   text-shadow: 1px 1px 3px #000000;
+}
+
+label {
+   display: block;
+   margin: 8px 0px 5px 10px;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-weight: bold;
+   letter-spacing: 0.5px;
+}
+
+/* Sets style for input boxes and drop-down menu */
+
+input, select {
+       display: block;
+       width: 100%;
+       padding: 10px;
+       box-sizing: border-box;
+       font-size: 1.2em;
+       border-radius: 5px;
+       margin: 0px 0px 5px 0px;
+       border: 1px solid #3b0000;
+       background-color: #eee5e5;
+       color: #2a0000;
+}
+
+select option {
+   padding: 5px;
+}
+
+/* Sets style for submit button */
+
+input[type="submit"] {
+   display: block;
+   width: 200px;
+   margin: 30px auto;
+   padding: 10px;
+   font-size: 1em;
+   font-weight: bold;
+   color: #ffffff;
+   background: linear-gradient(145deg, #800000, #450000);
+   border: 1px solid #990000;
+   border-radius: 10px;
+   cursor: pointer;
+   box-shadow: 0 1px 10px #000000;
+}
+
+/* Sets glow around submit button when hovered */
+
+input[type="submit"]:hover {
+       background-color: #990000;
+       box-shadow: 0 0 15px #ff0000;
+       transform: translateY(-3px);
+}
+
+/* Splits reservation form into two vertical columns */
+
+.reservations {
+       display: flex;
+       flex-direction: row;
+       align-items: flex-start;
+       gap: 25px;
+       width: 100%;
+       max-width: 1000px;
+       margin: 0 auto;
+}
+
+.reservations fieldset {
+       flex: 1;
+       min-width: 0;
+       padding: 20px;
+       border: 2px solid #4b0000;
+       box-sizing: border-box;
+}
+
+.reservations label {
+       display: block;
+       margin-top: 15px;
+       margin-bottom: 5px;
+       color: #ffffff
+}
+
+/* Sets style for glow around input field when clicked on */
+
+.reservations input:focus, .reservations select:focus {
+       outline: none;
+       border: 2px solid #990000;
+       box-shadow: 0 0 8px #990000;
+}
+
+/* Sets style for asterisk on required fields */
+
+.required {
+       color: #990000;
+       font-weight: bold;
+       text-shadow: 0 0 5px #ff0000;
+}
+
+/* Sets styling for table */
+
+table {
+       width: 100%;
+       table-layout: fixed;
+       border-collapse: collapse;
+       margin: 20px 0;
+       background-color: #625858;
+       color: #1b0000;
+       box-shadow: 3px 3px 8px #000000;
+}
+
+caption {
+       font-size: 1.2em;
+       font-weight: bold;
+       color: #4b0000;
+       padding: 10px;
+}
+
+th, td {
+       padding: 12px 8px;
+       overflow-wrap: break-word;
+}
+
+th {
+       background-color: #360000;
+       color: #d9caca;
+       padding: 12px;
+       border: 1px solid #650000;
+}
+
+td {
+       padding: 12px;
+       border: 1px solid #650000;
+       text-align: center;
+}
+
+/* Sets alternating colors for rows for easier differentiation */
+
+tr:nth-child(even) {
+       background-color: #736666;
+}
+
+/* Highlights row when hovered over */
+
+tr:hover {
+       background-color: #887777;
+}

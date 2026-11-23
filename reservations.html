@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Reservations</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Reservations page">
+<link href="styles/styles.css" rel="stylesheet">
+<link href="styles/reservations_styles.css" rel="stylesheet">
+
+</head>
+<body>
+<div id="wrapper">
+  <header>
+      <h1>House of Nightmares</h1>
+  </header>
+  <nav>
+  <ul> 
+    <li><a href="index.html">Home</a></li>
+	<li><a href="rooms/midnight_circus.html">Midnight at the Circus</a></li>
+	<li><a href="rooms/spiders_lair.html">Spider's Lair</a></li>
+  <li><a href="rooms/graveyard.html">The Graveyard</a></li>
+  <li><a href="rooms/secrets_of_the_forest.html">Secrets of the Forest</a></li>
+  <li><a href="rooms/wails_in_the_night.html">Wails in the Night</a></li>
+	<li><a href="events/weekend_events.html">Weekend Events</a></li>
+	<li><a href="contact.html">Contact</a></li>
+  <li><a href="reservations.html">Reservations</a></li>
+  </ul>
+  </nav>
+  <main>
+
+
+  <!--Table for room rates-->
+  <h2>Room Pricing</h2>
+
+  <table>
+    <caption>Room Rates</caption>
+
+    <thead>
+      <tr>
+        <th>Number of Occupants</th>
+        <th>Price per Night</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>1 Person</td>
+        <td>$100</td>
+      </tr>
+      <tr>
+        <td>2 Person</td>
+        <td>$150</td>
+      </tr>
+      <tr>
+        <td>3 Person</td>
+        <td>$200</td>
+      </tr>
+      <tr>
+        <td>4 Person</td>
+        <td>$250</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!--Reservation form--> 
+  <h2>Reservations</h2>
+   <form action="login-script.php" method="post">
+    <div class="reservations">
+
+      <fieldset id = "submit">
+         <legend>Enter Guest Information</legend>
+         <label for="name">Full Name <span class="required">*</span></label>
+         <input type="text" id="name" required>
+         <label for="email">Email <span class="required">*</span></label>
+         <input type="text" id="email" required>
+         <label for="phone">Phone <span class="required">*</span></label>
+         <input type="tel" id="phone" name="phone" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Enter Reservation Information</legend>
+        <label for="checkin">Check-In Date <span class="required">*</span></label>
+        <input type="date" id="checkin" name="checkin" required>
+        <label for="checkout">Check-Out Date <span class="required">*</span></label>
+        <input type="date" id="checkout" name="checkout" required>
+        <label for="room">Room<span class="required">*</span></label>
+        <select id="room" name="room" required>
+          <option value="">Select a Room</option>
+          <option value="midnight_circus">Midnight at the Circus</option>
+          <option value="spiders_lair">Spider's Lair</option>
+          <option value="graveyard">The Graveyard</option>
+          <option value="secrets_of_the_forest">Secrets of the Forest</option>
+          <option value="wails_in_the_night">Wails in the Night</option>
+        </select>
+      </fieldset>
+
+    </div>
+      <input type="submit" value="Submit">
+   </form>
+
+</main>
+  <footer>
+  Copyright &copy; 2026 WebMaster
+  <a href="mailto:tskuper@amarillocollege.com">Tyler Kuper</a>
+  </footer>
+</div>
+</body>
+</html>

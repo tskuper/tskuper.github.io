@@ -1,0 +1,293 @@
+/* Imports special font for site title */
+
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+
+
+/* Added dark red theme coloring for horror asthetic
+as well as grey backround to make reading the colored font easier.
+Also edits the link colors for the navigation pane, adds background glow when hovered as well as
+transitioned slide to the right for visibility and style. */
+
+html {
+       filter: brightness(125%);
+       scroll-behavior: smooth;
+       a:link {
+              transition: all 0.3s ease;
+              color: #a60000;
+              font-weight: bold;
+              text-shadow: 1px 1px 2px #000000,
+                           0 0 4px #ff3333;
+       }
+       
+       a:visited {
+              color: #7f0707;
+              font-weight: bold;
+              text-shadow: 1px 1px 2px #000000;
+       }
+
+       a:hover {
+              color: #0e7303;
+              text-shadow: 0 0 5px #0e7303,
+                           0 0 8px #0e7303,
+                           0 0 15px #0e7303;
+       }
+}
+
+header, nav, main, footer {
+       display: block;
+}
+
+header {
+       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Adds horror theme picture in the background of the webpage that remains stationary as you scroll */
+body { 
+       background-image: url("../images/background.png");
+       background-size: cover;
+       background-position: center;
+       background-repeat: no-repeat;
+       background-attachment: fixed;
+       background-color: #360000;
+       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#wrapper { 
+       position: relative;
+       width: 95%;
+       max-width: 960px;
+       margin: auto;
+	background-color: #1b0000;
+	color: #740909;
+	box-shadow: 5px 5px 15px #000000;
+       overflow: hidden;
+       border: 2px solid #4b0000;
+       border-radius: 5px;
+}
+
+/* Sets layer of wrapper so border image doesn't cover page elements */
+
+#wrapper::before {
+       content: "";
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 350px;
+       height: 350px;
+       background-image: url("../images/border_image.png");
+       background-repeat: no-repeat;
+       background-position: top left;
+       background-size: contain;
+       z-index: 0;
+       pointer-events: none;
+}
+
+/* Added horror theme title for page on top of wrapper to stay on top of image */
+
+h1 {
+       font-family: 'UnifrakturMaguntia', fantasy;
+       background-repeat: no-repeat;
+       background-position: center;
+       background-size: cover;
+       background-color: transparent;
+       position: relative;
+       z-index: 1;
+	height: 110px;
+       margin-bottom: 0;
+	font-size: 4em;
+       font-weight: normal;
+       letter-spacing: 3px;
+       padding-left: 275px;
+	padding-top: 20px;
+       color: #b30000;
+	text-shadow: 3px 3px 3px #000000,
+       0 0 8px #990000,
+       0 0 15px #650000;
+}
+
+h1::after {
+       content: "";
+       position: absolute;
+       bottom: 0;
+       left: 200px;
+       right: 0;
+       border-bottom: 2px solid #650000;
+}
+
+/* Sets position of page elements behind everything to enable proper view of all page elements */
+
+nav, main, footer {
+       position: relative;
+       z-index: 1;
+}
+
+/* Changed link colors to fit the theme, as well as 
+green link hovering to give a sickly feel that also
+makes the link stand out when you hover over it */
+nav { 
+       padding-top: 10px;
+       float: left;
+       width: 200px; 
+}
+nav ul { 
+       list-style-type: none; 
+       padding-left: 20px;
+}
+
+nav li { 
+       padding-bottom: 10px;
+       font-weight: bold;
+}
+
+/* Sets transition of links to slide to the right when hovered over */
+
+nav a { 
+       transition: all 0.3s ease;
+       text-decoration: none;
+       display: inline-block;
+       padding: 7px 5px;
+       font-size: 1.05em;
+       font-weight: bold;
+       color: #d93636;
+       text-shadow: 1px 1px 2px #000000,
+                    0 0 5px #990000,
+                    0 0 8px #650000;
+}
+
+nav a:hover {
+       padding-left: 12px;
+       color: #39b52c;
+       text-shadow: 0 0 5px #0e7303,
+                    0 0 8px #0e7303,
+                    0 0 15px #0e7303;
+}
+
+/* Changes the background color
+adds red pane on left side of screen as well as keeping
+list seperated from main body of the page */
+
+main { 
+       background-color: #756969;
+       margin-left: 200px;
+       padding: 1px 20px 20px 20px;
+       border-left: 2px solid #650000;
+       box-shadow: inset 3px 0 8px #000000;
+       color: #1b0000;
+       line-height: 1.6;
+}
+
+main h2 {
+       color: #4b0000;
+       border-bottom: 2px solid #650000;
+       padding-bottom: 5px;
+       text-shadow: 1px 1px 2px #000000;
+       margin-top: 25px;
+       margin-bottom: 20px;
+}
+
+main h3 {
+       color: #550000;
+       text-shadow: 1px 1px 2px #000000;
+}
+
+main p {
+       line-height: 1.7;
+       margin-bottom: 20px;
+}
+
+main a:link{
+       color: #1b0000;
+       font-weight: bold;
+       text-decoration: underline;
+       text-decoration-color: #650000;
+       text-underline-offset: 3px;
+}
+
+main a:visited {
+       color: #1b0000;
+       font-weight: bold;
+}
+
+main a:hover {
+       color: #39b52c;
+       text-shadow: 0 0 5px #0e7303,
+                    0 0 8px #0e7303,
+                    0 0 15px #0e7303;
+}
+
+
+main a:focus-visible {
+       outline: 2px solid #650000;
+       outline-offset: 3px;
+}
+
+/* Separates footer from the rest of the page by changing the color */
+
+footer { 
+       background-color: #625858;
+       margin-left: 200px;
+       padding: 20px;
+       text-align: center;
+	font-size: small;
+	font-style: italic;
+       border-top: 2px solid #650000;
+       box-shadow: inset 0 3px 6px #000000;
+}
+
+/* Changes section in weekend events page to center the header section for the halloween special */
+
+#halloween_special {
+       text-align: center;
+}
+
+/* Changes website when viewed on smaller screens to keep all elements visible and usable */
+
+@media screen and (max-width: 700px) {
+       h1 {
+              font-size: 2.2em;
+              padding-left: 15px;
+              text-align: center;
+              height: auto;
+              min-height: 110px;
+       }
+
+       h1::after {
+              left: 0;
+       }
+
+       nav {
+              float: none;
+              width: 100%;
+              text-align: center;
+       }
+
+       nav ul{
+              padding-left: 0;
+       }
+
+       nav li {
+              display: inline-block;
+              padding: 5px;
+       }
+
+       main {
+              margin-left: 0;
+              border-left: none;
+       }
+
+       footer {
+              margin-left: 0;
+       }
+
+       table {
+              font-size: 0.85em;
+       }
+
+       th, td {
+              padding: 8px 4px;
+       }
+
+       caption {
+              font-size: 1.05em;
+       }
+}
